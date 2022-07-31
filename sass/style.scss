@@ -1,0 +1,48 @@
+/* VARIABLES */
+@import './colors';
+
+/* SITE */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Manrope', sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0 1.5rem;
+	background-color: $dark-blue;
+}
+
+/* SECTION */
+
+.advice-box {
+	background-color: $dark-grayish-blue;
+	width: 100%;
+	max-width: 54rem;
+	height: auto;
+}
+
+
+
+/* HOVERS */
+
+/* ANIMATIONS */
+
+/* MEDIA QUERIES */
+
+@media (min-width: 992px) {
+}
