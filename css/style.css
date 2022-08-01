@@ -37,13 +37,97 @@ body {
 
 /* SECTION */
 .advice-box {
-  background-color: #323a49;
+  position: relative;
   width: 100%;
   max-width: 54rem;
   height: auto;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 4rem 2.5rem 6rem;
+  margin-bottom: 4rem;
+  background-color: #323a49;
 }
 
-/* HOVERS */
+.advice-box__heading {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: #52ffa8;
+}
+
+.advice-box__text {
+  font-size: 2.8rem;
+  color: #cee3e9;
+  margin: 3rem 0 2rem;
+}
+
+.advice-box__divider {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+
+.advice-box__dice {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, 50%, 0);
+          transform: translate3d(-50%, 50%, 0);
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 50%;
+  background-color: #52ffa8;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.advice-box__dice--icon {
+  position: relative;
+  display: block;
+  margin: auto;
+}
+
+.advice-box__dice:hover {
+  -webkit-box-shadow: 0px 0px 25px 1px #52ffa8;
+          box-shadow: 0px 0px 25px 1px #52ffa8;
+}
+
+.desktop {
+  display: none;
+}
+
+.animate {
+  -webkit-animation: 1s forwards ease-in diceRoll;
+          animation: 1s forwards ease-in diceRoll;
+}
+
 /* ANIMATIONS */
+@-webkit-keyframes diceRoll {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes diceRoll {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 /* MEDIA QUERIES */
+@media (min-width: 420px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+}
 /*# sourceMappingURL=style.css.map */
