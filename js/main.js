@@ -1,4 +1,4 @@
-const diceBtn = document.querySelector('.advice-box__dice--icon')
+const diceBtn = document.querySelector('.advice-box__dice')
 
 async function getAdvice() {
 	const response = await fetch('https://api.adviceslip.com/advice', { cache: 'no-cache' })
@@ -13,10 +13,10 @@ async function getAdvice() {
 }
 
 function animateDice() {
-	diceBtn.classList.add('animate')
+	document.querySelector('.advice-box__dice--icon').classList.add('animate')
 
 	setTimeout(function () {
-		diceBtn.classList.remove('animate')
+		document.querySelector('.advice-box__dice--icon').classList.remove('animate')
 	}, 2000)
 }
 

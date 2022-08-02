@@ -29,10 +29,6 @@ body {
 
 /* SECTION */
 
-// section {
-// 	display: flex;
-// }
-
 .advice-box {
 	position: relative;
 	width: 100%;
@@ -99,8 +95,25 @@ body {
 /* ANIMATIONS */
 
 @keyframes diceRoll {
-	100% {
-		transform: rotate(360deg);
+	10%,
+	90% {
+		transform: translate3d(-1px, 1px, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(2px, -2px, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 4px, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(4px, -2px, 0);
 	}
 }
 
